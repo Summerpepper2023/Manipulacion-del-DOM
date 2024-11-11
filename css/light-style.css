@@ -17,7 +17,7 @@
 
 body{
     height: 100vh;
-    background: var(--backdround-color  );
+    background: var(--backdround-color );
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,11 +81,28 @@ button:hover{
     position: relative;
 }
 
+.animacion {
+    animation: animated infinite ease !important;
+}
+
 #figura{
     width: 200px;
     height: 200px;
     background: var(--secondary-light-color);
+    background-position: center;
+    background-size: cover;
     box-shadow: 0 0 10px var(--secondary-light-color);
     transition: .3s;
     position: absolute;
+}
+
+
+@keyframes animated {
+    0% {
+        background: yellow;
+    }
+
+    100% {
+        background: #202b1c;
+    }
 }
