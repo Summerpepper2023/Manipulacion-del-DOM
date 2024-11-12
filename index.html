@@ -25,21 +25,29 @@
                 <button onclick="diagonalPos()">Diagonal</button>
                 <button onclick="animation()">Animation</button>
                 <button onclick="fondoDegradado()">Degradado</button>
-                <button>Estrella</button>
-                <button>Datos Usuario</button>
-                <button>Barra Lateral</button>
-                <button>Barra Superior</button>
+                <button onclick="estrella()">Estrella</button>
+                <button onclick="panelLateral()">Panel Lateral</button>
+                <button onclick="panelSuperior()">Panel Superior</button>
             </div>
         </article>
         
+        <!-- Seccion Figura -->
         <article class="right">
             <h2>Figura</h2>
             <div class="contenedor-figura">
-                <div class='figura'></div>
+                <div id='figura'></div>
             </div>
         </article>
-    </section>
 
+        
+    </section>
+    <article id="panel-lateral">
+        <button onclick="panelLateral()">Remover Panel</button>
+    </article>
+    
+    <article id="panel-superior">
+        <button onclick="panelSuperior()">Remover Panel</button>
+    </article>
 
     <script src="js/main.js"></script>
 </body>

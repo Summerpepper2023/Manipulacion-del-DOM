@@ -1,9 +1,10 @@
-const figura = document.querySelector('.figura')
+const figura = document.getElementById('figura')
 const titulo = document.querySelector('.right h2')
 const contenedorFigura = document.querySelector('.contenedor-figura')
 
 function circulo() {
     figura.style.transform = ''
+    figura.classList.remove('estrella')
     titulo.innerHTML = 'Circulo'
 
     if (figura.style.borderRadius == '' || figura.style.borderRadius != '50%') {
@@ -17,6 +18,7 @@ function circulo() {
 function rombo() {
     titulo.innerHTML = 'Rombo'
     figura.style.borderRadius = ''
+    figura.classList.remove('estrella')
 
     if (figura.style.transform == '' || figura.style.transform != 'rotate(45deg)') {
         figura.style.transform = 'rotate(45deg)'
@@ -108,10 +110,46 @@ function animation() {
     }
 }
 
+// Revisar esta funcion
 function fondoDegradado() {
     titulo.innerHTML = 'Degradado'
-    console.log(figura.style.backgroundColor)
-    if (figura.style.backgroundColor == '' || figura.style.backgroundColor != 'linear-gradient(var(--background-color), var(--primary-light-color))'){
-        figura.stryle.backgroundColor = 'linear-gradient(var(--background-color), var(--primary-light-color))'
+    
+    if (figura.classList.contains('degradado')){
+        figura.classList.remove('degradado')
+    }
+    else {
+        figura.classList.add('degradado')
+    }
+}
+
+function estrella() {
+    titulo.innerHTML = 'Estrella'
+    if (figura.classList.contains('estrella')){
+        figura.classList.remove('estrella')
+    }
+    else {
+        figura.classList.add('estrella')
+    }
+}
+
+function panelLateral() {
+    const panelLateral = document.getElementById('panel-lateral')
+
+    if(panelLateral.classList.contains('active')){
+        panelLateral.classList.remove('active')
+    }
+    else {
+        panelLateral.classList.add('active')
+    }
+}
+
+function panelSuperior() {
+    const panelSuperior = document.getElementById('panel-superior')
+
+    if (panelSuperior.classList.contains('active')){
+        panelSuperior.classList.remove('active')
+    }
+    else {
+        panelSuperior.classList.add('active')
     }
 }

@@ -29,6 +29,8 @@ section{
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
 }
 
 .left, .right{
@@ -85,7 +87,7 @@ button:hover{
     animation: animated infinite ease;
 }
 
-.figura{
+#figura{
     width: 200px;
     height: 200px;
     background: var(--secondary-light-color);
@@ -93,6 +95,16 @@ button:hover{
     background-size: cover;
     box-shadow: 0 0 10px var(--secondary-light-color);
     transition: .3s;
+}
+
+#figura.estrella{
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+}
+
+#figura.degradado {
+    background: linear-gradient(to right, black, grey, white);
+    transition: .25s;
 }
 
 
@@ -112,4 +124,40 @@ button:hover{
         transform: translate(250px, 0) rotate(360deg);
         border-radius: 50%;
     }
+}
+
+#panel-lateral{
+    height: 100%;
+    width: 30%;
+    background: var(--primary-dark-color);
+    position: absolute;
+    left: -30%;
+    z-index: 10;
+    transition: .25s;
+    display: grid;
+    place-content: center;
+}
+
+#panel-lateral.active{
+    left: 0;
+}
+
+#panel-superior{
+    height: 100%;
+    width: 100%;
+    background: var(--primary-dark-color);
+    position: absolute;
+    top: -100%;
+    z-index: 10;
+    transition: .25s;
+    display: grid;
+    place-content: center;
+}
+
+#panel-superior button, #panel-lateral button{
+    font-size:40px;
+}
+
+#panel-superior.active{
+    top: 0;
 }
