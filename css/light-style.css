@@ -99,7 +99,6 @@ button:hover{
 
 #figura.estrella{
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-
 }
 
 #figura.degradado {
@@ -134,9 +133,54 @@ button:hover{
     left: -30%;
     z-index: 10;
     transition: .25s;
-    display: grid;
-    place-content: center;
+    text-align: center;
 }
+
+#panel-lateral .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#panel-lateral button, #panel-superior button{
+    background: transparent;
+    border: none;
+    font-size: 30px;
+}
+
+#panel-lateral button:hover, #panel-superior button:hover{
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#panel-lateral .links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+    text-align: start;
+    padding: 0 25px;
+    gap: 20px;
+    list-style: none;
+}
+
+#panel-lateral li{
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: ease-in .25s;
+    padding-bottom: 10px;
+}
+
+#panel-lateral li:hover{
+    border-bottom: 3px solid var(--backdround-color);
+}
+
 
 #panel-lateral.active{
     left: 0;
@@ -150,14 +194,19 @@ button:hover{
     top: -100%;
     z-index: 10;
     transition: .25s;
-    display: grid;
-    place-content: center;
-}
-
-#panel-superior button, #panel-lateral button{
-    font-size:40px;
+    text-align: center;
 }
 
 #panel-superior.active{
     top: 0;
+}
+
+#panel-superior .header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    color: white;
+    font-size: 30px;
 }

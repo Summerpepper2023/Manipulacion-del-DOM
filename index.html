@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maniplacion del DOM</title>
     <link rel="stylesheet" href="css/light-style.css" id="estilos">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- Seccion Principal -->
@@ -42,11 +43,24 @@
         
     </section>
     <article id="panel-lateral">
-        <button onclick="panelLateral()">Remover Panel</button>
+        <div class="header">
+            <h3>Menu</h3>
+            <button onclick="panelLateral()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="links">
+            <li><i class="fa-solid fa-house"></i> Home</li>
+            <li><i class="fa-solid fa-magnifying-glass"></i> Buscar</li>
+            <li><i class="fa-solid fa-user"></i> Usuarios</li>
+            <li><i class="fa-solid fa-gears"></i> Configuracion</li>
+        </ul>
     </article>
     
     <article id="panel-superior">
-        <button onclick="panelSuperior()">Remover Panel</button>
+        <div class="header">
+            <h3>El mejor Canal para Aprender a Programar</h3>
+            <button onclick="panelSuperior()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <iframe width="90%" height="80%" src="https://www.youtube.com/embed/oA-LPhqQVVY?si=eYjVtPIgqh-WqJTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </article>
 
     <script src="js/main.js"></script>
