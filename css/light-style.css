@@ -82,10 +82,10 @@ button:hover{
 }
 
 .animacion {
-    animation: animated infinite ease !important;
+    animation: animated infinite ease;
 }
 
-#figura{
+.figura{
     width: 200px;
     height: 200px;
     background: var(--secondary-light-color);
@@ -93,16 +93,23 @@ button:hover{
     background-size: cover;
     box-shadow: 0 0 10px var(--secondary-light-color);
     transition: .3s;
-    position: absolute;
 }
 
 
-@keyframes animated {
+@keyframes shadow {
     0% {
-        background: yellow;
+        box-shadow: 0 0 5px var(--secondary-light-color);
+        transform: translate(-250px, 0) rotate(0deg);
+        border-radius: 0;
+    }
+
+    25% {
+        border-radius: 30%;
     }
 
     100% {
-        background: #202b1c;
+        box-shadow: 0 0 50px var(--secondary-dark-color);
+        transform: translate(250px, 0) rotate(360deg);
+        border-radius: 50%;
     }
 }

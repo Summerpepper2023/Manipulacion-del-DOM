@@ -1,4 +1,4 @@
-const figura = document.getElementById('figura')
+const figura = document.querySelector('.figura')
 const titulo = document.querySelector('.right h2')
 const contenedorFigura = document.querySelector('.contenedor-figura')
 
@@ -100,6 +100,18 @@ function diagonalPos() {
 
 function animation() {
     titulo.innerHTML = 'Animacion'
+    if (figura.style.animation == ''){
+        figura.style.animation = 'shadow 1.5s ease alternate-reverse infinite none running'
+    }
+    else {
+        figura.style.animation = ''
+    }
+}
 
-    
+function fondoDegradado() {
+    titulo.innerHTML = 'Degradado'
+    console.log(figura.style.backgroundColor)
+    if (figura.style.backgroundColor == '' || figura.style.backgroundColor != 'linear-gradient(var(--background-color), var(--primary-light-color))'){
+        figura.stryle.backgroundColor = 'linear-gradient(var(--background-color), var(--primary-light-color))'
+    }
 }
